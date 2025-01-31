@@ -1,9 +1,8 @@
-
 [
   {
     "kind": "column",
-    "name": "OpenAI (Assistants)",
-    "description": "Create, modify and run OpenAI Assistants.",
+    "name": "Generate OpenAI Image Variations",
+    "description": "Create variations of an image using OpenAI's DALL-E API, with optional response format settings.",
     "author": "Gavin Horne <gavin@thinknetwork.com.au>",
     "params": [
       {
@@ -12,18 +11,28 @@
         "type": "string"
       },
       {
-        "name": "endpoint",
-        "displayName": "API Endpoint (Required)",
+        "name": "image",
+        "displayName": "Base Image (Required, Multipart)",
+        "type": "file"
+      },
+      {
+        "name": "n",
+        "displayName": "Number of Variations (Optional, Default: 1)",
+        "type": "number"
+      },
+      {
+        "name": "size",
+        "displayName": "Image Size (Optional, e.g., 1024x1024)",
         "type": "string"
       },
       {
-        "name": "body",
-        "displayName": "Body (JSON Schema Required)",
+        "name": "response_format",
+        "displayName": "Response Format (Optional, url/b64_json)",
         "type": "string"
       },
       {
-        "name": "json",
-        "displayName": "JSON Schema (Output)",
+        "name": "user",
+        "displayName": "User ID (Optional, Custom Identifier)",
         "type": "string"
       }
     ],
